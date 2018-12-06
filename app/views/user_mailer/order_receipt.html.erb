@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Thanks for your order, <%= @name %></h1>
+    <p>
+      Order number: <%= @order.id %>.<br>
+    </p>
+    <p>
+    <%= render @order.line_items %>
+    </p>
+    <p>Have a great day!</p>
+  </body>
+</html>
