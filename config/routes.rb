@@ -9,6 +9,10 @@ Rails.application.routes.draw do
     post   :add_item
     post   :remove_item
   end
+  
+  resources :products do
+    resources :reviews, only: [:create, :destroy]
+  end
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
